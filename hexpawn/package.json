@@ -1,0 +1,25 @@
+{
+  "name": "hexpawn",
+  "version": "0.1.0",
+  "author": "Lee Jones",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "biome check ."
+  },
+  "dependencies": {
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.3.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "dprint": "^0.43.0",
+    "sass": "^1.69.5",
+    "typescript": "^5"
+  }
+}
