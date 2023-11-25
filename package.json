@@ -1,6 +1,7 @@
 {
   "name": "hexpawn",
   "version": "0.1.0",
+  "author": "Lee Jones",
   "private": true,
   "scripts": {
     "dev": "next dev",
