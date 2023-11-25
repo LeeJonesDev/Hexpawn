@@ -1,5 +1,8 @@
 {
     "recommendations": [
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "biomejs.biome",
+        "santacodes.santacodes-region-viewer",
+        "txava.region-marker"
     ]
 }
