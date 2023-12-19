@@ -1,32 +1,69 @@
-import { ReactNode } from "react";
 import { HexagonIconType } from "./HexagonIcons";
 
 interface HexagonProps {
-    key: number,
+    id: string,
     name?: string,
 
-    terrainIconSpecs: {
+    terrainIconSpecs?: {
+        terrainName: HexagonIconType,
         iconSize: number;
         x: number;
         y: number;
     },
-    terrainName: HexagonIconType,
-    iconSvg: HexagonIconType,
+
 
     points: [number, number, number, number, number, number],
-    height: number,
     radius: number,
 
-    fillColor: string,
-    strokeColor: string,
+    fill?: string | undefined;
+    fillOpacity?: number | string | undefined;
+
+    fontFamily?: string | undefined;
+    fontSize?: number | string | undefined;
+    fontSizeAdjust?: number | string | undefined;
+    fontStretch?: number | string | undefined;
+    fontStyle?: number | string | undefined;
+    fontVariant?: number | string | undefined;
+    fontWeight?: number | string | undefined;
+
+    mask?: string | undefined;
+    maskContentUnits?: number | string | undefined;
+    maskUnits?: number | string | undefined;
+
+    stroke?: string | undefined;
+    strokeDasharray?: string | number | undefined;
+    strokeDashoffset?: string | number | undefined;
+    strokeLinecap?: "butt" | "round" | "square" | "inherit" | undefined;
+    strokeLinejoin?: "miter" | "round" | "bevel" | "inherit" | undefined;
+    strokeMiterlimit?: number | string | undefined;
+    strokeOpacity?: number | string | undefined;
+    strokeWidth?: number | string | undefined;
+
+
+    targetX?: number | string | undefined;
+    targetY?: number | string | undefined;
+
+    origin?: number | string | undefined;
+
+
+    textAnchor?: string | undefined;
+    textDecoration?: number | string | undefined;
+    textLength?: number | string | undefined;
+    textRendering?: number | string | undefined;
+    visibility?: number | string | undefined;
+
+    suppressHydrationWarning?: boolean | undefined;
+
     coordinateFontSize: number,
 
-    center: { x: number, y: number }
+
     offsetCoordinates: { x: number, y: number },
     axialCoordinates: { q: number, r: number, s: number },
 
     isHideAxialCoordinates: boolean,
     isHideOffSetCoordinates: boolean,
+
+
 
     coordTextCoordinates: {
         x: number,
