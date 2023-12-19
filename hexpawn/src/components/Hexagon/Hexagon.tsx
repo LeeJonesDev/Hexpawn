@@ -14,14 +14,18 @@ const Hexagon = ({
         HexagonIcon = HexagonIcons[terrainIconSpecs.terrainName];
     }
 
-    //TODO: GET COORDINATES
+    //TODO: GET AND RENDER COORDINATES
+
+    const parsedPoints: string = points.map(coordinate =>
+        coordinate.join(' ').toString()
+    ).join(' ').toString();
 
     return (
         <svg
             x={offsetCoordinates.x}
             y={offsetCoordinates.y}
 
-            points={points.join(',').toString()}
+            points={parsedPoints}
 
 
             {...props}

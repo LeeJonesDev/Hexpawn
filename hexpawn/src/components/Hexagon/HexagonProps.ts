@@ -11,8 +11,14 @@ interface HexagonProps {
         y: number;
     },
 
-
-    points: [number, number, number, number, number, number],
+    //x, y coords of each point of the svg
+    points: [
+        [number, number],
+        [number, number],
+        [number, number],
+        [number, number],
+        [number, number],
+        [number, number]],
     radius: number,
 
     fill?: string | undefined;
@@ -54,30 +60,30 @@ interface HexagonProps {
 
     suppressHydrationWarning?: boolean | undefined;
 
-    coordinateFontSize: number,
+    //coordinateFontSize: number,
 
 
     offsetCoordinates: { x: number, y: number },
     axialCoordinates: { q: number, r: number, s: number },
 
-    isHideAxialCoordinates: boolean,
-    isHideOffSetCoordinates: boolean,
+    // isHideAxialCoordinates: boolean,
+    // isHideOffSetCoordinates: boolean,
 
 
 
-    coordTextCoordinates: {
-        x: number,
-        y: number,
-        qx: number,
-        qy: number,
-        rx: number,
-        ry: number,
-        sx: number,
-        sy: number,
-        qq: number,
-        rr: number,
-        ss: number,
-    },
+    // coordTextCoordinates?: {
+    //     x: number,
+    //     y: number,
+    //     qx: number,
+    //     qy: number,
+    //     rx: number,
+    //     ry: number,
+    //     sx: number,
+    //     sy: number,
+    //     qq: number,
+    //     rr: number,
+    //     ss: number,
+    // },
 }
 
 export type {
