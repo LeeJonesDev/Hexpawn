@@ -5,6 +5,8 @@
         "hexpawn"
     ],
     "scripts": {
+        "yarn": "yarn workspace hexpawn yarn",
+        "yarn install": "yarn workspace hexpawn yarn install",
         "dev": "yarn workspace hexpawn dev",
         "build": "yarn workspace hexpawn build",
         "lint": "yarn workspace hexpawn lint"
