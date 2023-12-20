@@ -2,17 +2,12 @@ import { HexagonIcons } from "./HexagonIcons";
 import { HexagonProps } from "./HexagonProps";
 
 const Hexagon = ({
-    terrainIconSpecs,
+    terrainSpecs,
     points,
     offsetCoordinates,
     ...props
 }: HexagonProps) => {
     console.log({ ...props });
-
-    let HexagonIcon = undefined
-    if (terrainIconSpecs?.terrainName) {
-        HexagonIcon = HexagonIcons[terrainIconSpecs.terrainName];
-    }
 
     //TODO: GET AND RENDER COORDINATES
 
@@ -30,7 +25,8 @@ const Hexagon = ({
 
             {...props}
         >
-            {HexagonIcon}
+            {terrainSpecs &&
+                HexagonIcons[terrainSpecs.terrainName]}
         </svg>
     );
 }

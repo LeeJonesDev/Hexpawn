@@ -1,11 +1,11 @@
-import { HexagonIconType } from "./HexagonIcons";
+import { HexagonIconKeys } from "./HexagonIcons";
 
 interface HexagonProps {
     id: string,
     name?: string,
 
     terrainIconSpecs?: {
-        terrainName: HexagonIconType,
+        terrainName: HexagonIconKeys,
         iconSize: number;
         x: number;
         y: number;
@@ -18,7 +18,8 @@ interface HexagonProps {
         [number, number],
         [number, number],
         [number, number],
-        [number, number]],
+        [number, number]
+    ],
     radius: number,
 
     fill?: string | undefined;

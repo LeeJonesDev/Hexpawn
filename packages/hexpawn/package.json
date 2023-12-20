@@ -2,6 +2,7 @@
   "name": "hexpawn",
   "version": "0.1.0",
   "author": "Lee Jones",
+  "main": "./src/app/page.tsx",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
