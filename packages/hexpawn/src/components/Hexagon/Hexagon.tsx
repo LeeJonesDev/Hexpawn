@@ -5,12 +5,11 @@ const Hexagon = ({
     points,
     offsetCoordinates,
     axialCoordinates,
-    fill = 'black',
+    fill = 'none',
     stroke = 'black',
     strokeWidth = 2,
     ...props
 }: HexagonProps) => {
-    console.log({ ...props });
 
     //TODO: GET AND RENDER COORDINATES
 
@@ -19,7 +18,7 @@ const Hexagon = ({
     ).join(' ').toString();
 
     return (
-        <svg
+        <polygon
             x={offsetCoordinates.x}
             y={offsetCoordinates.y}
 
@@ -31,11 +30,10 @@ const Hexagon = ({
             fill={fill}
             stroke={stroke}
             strokeWidth={strokeWidth}
-            {...props}
-        >
+            {...props} >
             {/* {terrainSpecs &&
                 HexagonIcons[terrainSpecs.terrainName]} */}
-        </svg>
+        </polygon>
     );
 }
 
