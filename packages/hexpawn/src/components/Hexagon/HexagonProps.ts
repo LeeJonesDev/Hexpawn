@@ -4,7 +4,7 @@ interface HexagonProps {
     id: string,
     name?: string,
 
-    terrainIconSpecs?: {
+    terrainSpecs?: {
         terrainName: HexagonIconKeys,
         iconSize: number;
         x: number;
@@ -66,6 +66,10 @@ interface HexagonProps {
 
     offsetCoordinates: { x: number, y: number },
     axialCoordinates: { q: number, r: number, s: number },
+
+    q?: number
+    r?: number
+    s?: number
 
     // isHideAxialCoordinates: boolean,
     // isHideOffSetCoordinates: boolean,

@@ -9,7 +9,7 @@ export default function Home() {
       <Hexagon
         id={"1-1"}
         points={[[50, 3], [100, 28], [100, 75], [50, 100], [3, 75], [3, 25]]}
-        radius={1}
+        radius={10}
         terrainSpecs={{
           terrainName: HexagonIconKeys.desert,
           iconSize: 32,
@@ -19,7 +19,8 @@ export default function Home() {
         offsetCoordinates={{
           x: 0,
           y: 0
-        }} axialCoordinates={{
+        }}
+        axialCoordinates={{
           q: 0,
           r: 0,
           s: 0
