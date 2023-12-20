@@ -1,4 +1,3 @@
-import { HexagonIcons } from "./HexagonIcons";
 import { HexagonProps } from "./HexagonProps";
 
 const Hexagon = ({
@@ -23,6 +22,11 @@ const Hexagon = ({
         <svg
             x={offsetCoordinates.x}
             y={offsetCoordinates.y}
+
+            q={axialCoordinates.q}
+            r={axialCoordinates.r}
+            s={axialCoordinates.s}
+
             points={parsedPoints}
             fill={fill}
             stroke={stroke}

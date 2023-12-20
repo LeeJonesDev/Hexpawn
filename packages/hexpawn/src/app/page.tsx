@@ -1,5 +1,5 @@
-import Hexagon from "../components/Hexagon/Hexagon";
 import { HexagonIconKeys } from "@/components/Hexagon/HexagonIcons";
+import Hexagon from "../components/Hexagon/Hexagon";
 
 export default function Home() {
   return (
