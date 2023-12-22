@@ -1,15 +1,12 @@
-import { HexagonIconKeys } from "./HexagonIcons";
+import { HexagonIconKeys } from "./Terrain/TerrainIconsSvg";
+import { TerrainProps } from "./Terrain/TerrainProps";
 
 interface HexagonProps {
     id: string,
     name?: string,
+    key?: string
 
-    terrainSpecs?: {
-        terrainName: HexagonIconKeys,
-        iconSize: number;
-        x: number;
-        y: number;
-    },
+    terrainSpecs?: TerrainProps,
 
     //x, y coords of each point of the svg
     points: [
