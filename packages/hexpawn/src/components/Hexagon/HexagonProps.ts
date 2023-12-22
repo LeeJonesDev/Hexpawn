@@ -6,7 +6,7 @@ interface HexagonProps {
     name?: string,
     key?: string
 
-    terrainSpecs?: TerrainProps,
+    terrainProps?: TerrainProps,
 
     //x, y coords of each point of the svg
     points: [
@@ -17,7 +17,7 @@ interface HexagonProps {
         [number, number],
         [number, number]
     ],
-    radius: number,
+
 
     fill?: string | undefined;
     fillOpacity?: number | string | undefined;
@@ -46,8 +46,6 @@ interface HexagonProps {
 
     targetX?: number | string | undefined;
     targetY?: number | string | undefined;
-
-    origin?: number | string | undefined;
 
 
     textAnchor?: string | undefined;
@@ -87,7 +85,8 @@ interface HexagonProps {
     //     ss: number,
     // },
 
-    //todo:sort props on save
+    //TODO: prune props
+    //TODO:sort props on save
 }
 
 export type {

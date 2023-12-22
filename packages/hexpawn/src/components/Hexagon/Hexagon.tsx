@@ -1,16 +1,16 @@
 import { TerrainIcons } from "./Terrain/TerrainIcons";
 import { HexagonProps } from "./HexagonProps";
+import style from './style.module.css'
 
 const Hexagon = ({
     id,
-    terrainSpecs,
+    terrainProps,
     points,
     offsetCoordinates,
     axialCoordinates,
     fill = 'none',
     stroke = 'black',
     strokeWidth = 2,
-    radius,
     ...props
 }: HexagonProps) => {
 
@@ -34,14 +34,18 @@ const Hexagon = ({
         {...props}
     />
 
-    const terrainProps = terrainSpecs && {
-        fill,
-        stroke,
-        strokeWidth,
-        key: `icon-${id}`,
-        x: terrainSpecs.x,
-        y: terrainSpecs.y
-    }
+    const TerrainComponent = terrainProps &&
+        TerrainIcons[terrainProps.terrainname]({
+            key: `icon-${id}`,
+            ...terrainProps,
+
+        })
+
+    const TerrainComponentWrapped = terrainProps &&
+        TerrainComponent &&
+        <g transform="scale(0.43) translate(50 50)">
+            {TerrainComponent}
+        </g>
 
     //TODO: Render terain coorectly
     //TODO: Terrain Props
@@ -52,11 +56,9 @@ const Hexagon = ({
         <g>
             {HexagonComponent}
 
-            {terrainSpecs &&
-                TerrainIcons[terrainSpecs.terrainName]({
-                    ...terrainProps
-                })}
-        </g>
+            {TerrainComponentWrapped}
+
+        </g >
     );
 }
 

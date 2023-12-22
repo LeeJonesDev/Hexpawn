@@ -1,6 +1,6 @@
 import { TerrainIconKeys } from "@/components/Hexagon/Terrain/TerrainIcons";
 import Hexagon from "../components/Hexagon/Hexagon";
-import SVGContainer from "@/SvgContainer/SvgContainer";
+import SVGContainer from "@/components/SvgContainer/SvgContainer";
 
 export default function Home() {
   return (
@@ -9,11 +9,13 @@ export default function Home() {
         <Hexagon
           id={"1-1"}
           points={[[50, 3], [100, 28], [100, 75], [50, 100], [3, 75], [3, 25]]}
-          radius={50}
-          terrainSpecs={{
-            terrainName: TerrainIconKeys.desert,
+          terrainProps={{
+            terrainname: TerrainIconKeys.desert,
             x: 0,
-            y: 0
+            y: 0,
+            stroke: 'blue',
+            strokeWidth: 2,
+            fill: 'none'
           }}
           offsetCoordinates={{
             x: 0,
@@ -24,6 +26,7 @@ export default function Home() {
             r: 0,
             s: 0
           }}
+
         />
       </SVGContainer>
     </>

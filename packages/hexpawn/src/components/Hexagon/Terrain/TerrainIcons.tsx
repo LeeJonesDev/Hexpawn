@@ -1,3 +1,5 @@
+import style from './style.module.css'
+
 import Desert from '@Icons/Desert.svg'
 import Forest from '@Icons/Forest.svg'
 import Hill from '@Icons/Hill.svg'

@@ -13,12 +13,17 @@ interface TerrainProps {
     strokeOpacity?: number | string | undefined;
     strokeWidth?: number | string | undefined;
 
-    terrainName: TerrainIconKeys,
+    terrainname: TerrainIconKeys,
 
     key?: string
 
     x: number;
     y: number;
+
+    transform?: string | undefined;
+
+    //TODO: prune props
+    //TODO: sort props on save
 }
 
 export type { TerrainProps }
