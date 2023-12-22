@@ -86,6 +86,8 @@ interface HexagonProps {
     //     rr: number,
     //     ss: number,
     // },
+
+    //todo:sort props on save
 }
 
 export type {

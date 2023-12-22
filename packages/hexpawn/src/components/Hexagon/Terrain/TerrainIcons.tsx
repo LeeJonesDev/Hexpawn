@@ -30,5 +30,5 @@ const TerrainIcons = {
 }
 
 export {
-    TerrainIcons, TerrainIconKeys as TerrainIconKeys
+    TerrainIcons, TerrainIconKeys
 }
