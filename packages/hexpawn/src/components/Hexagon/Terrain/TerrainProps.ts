@@ -1,4 +1,4 @@
-import { HexagonIconKeys } from "./TerrainIconsSvg";
+import { TerrainIconKeys } from "./TerrainIcons";
 
 interface TerrainProps {
     fill?: string | undefined;
@@ -13,7 +13,7 @@ interface TerrainProps {
     strokeOpacity?: number | string | undefined;
     strokeWidth?: number | string | undefined;
 
-    terrainName: HexagonIconKeys,
+    terrainName: TerrainIconKeys,
 
     key?: string
 

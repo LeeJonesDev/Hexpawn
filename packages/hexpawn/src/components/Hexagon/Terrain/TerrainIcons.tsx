@@ -7,7 +7,7 @@ import Plain from '@Icons/Plain.svg'
 import Settlement from '@Icons/Settlement.svg'
 import Water from '@Icons/Water.svg'
 
-enum HexagonIconKeys {
+enum TerrainIconKeys {
     desert,
     forest,
     hill,
@@ -18,17 +18,17 @@ enum HexagonIconKeys {
     water
 }
 
-const HexagonIcons = {
-    [HexagonIconKeys.desert]: Desert,
-    [HexagonIconKeys.forest]: Forest,
-    [HexagonIconKeys.hill]: Hill,
-    [HexagonIconKeys.marsh]: Marsh,
-    [HexagonIconKeys.mountain]: Mountain,
-    [HexagonIconKeys.plain]: Plain,
-    [HexagonIconKeys.settlement]: Settlement,
-    [HexagonIconKeys.water]: Water
+const TerrainIcons = {
+    [TerrainIconKeys.desert]: Desert,
+    [TerrainIconKeys.forest]: Forest,
+    [TerrainIconKeys.hill]: Hill,
+    [TerrainIconKeys.marsh]: Marsh,
+    [TerrainIconKeys.mountain]: Mountain,
+    [TerrainIconKeys.plain]: Plain,
+    [TerrainIconKeys.settlement]: Settlement,
+    [TerrainIconKeys.water]: Water
 }
 
 export {
-    HexagonIcons, HexagonIconKeys
+    TerrainIcons, TerrainIconKeys as TerrainIconKeys
 }

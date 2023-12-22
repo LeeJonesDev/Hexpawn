@@ -1,4 +1,4 @@
-import { HexagonIconKeys } from "./Terrain/TerrainIconsSvg";
+import { TerrainIconKeys } from "./Terrain/TerrainIcons";
 import { TerrainProps } from "./Terrain/TerrainProps";
 
 interface HexagonProps {

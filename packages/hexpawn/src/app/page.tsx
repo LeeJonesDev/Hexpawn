@@ -1,4 +1,4 @@
-import { HexagonIconKeys } from "@/components/Hexagon/Terrain/TerrainIconsSvg";
+import { TerrainIconKeys } from "@/components/Hexagon/Terrain/TerrainIcons";
 import Hexagon from "../components/Hexagon/Hexagon";
 import SVGContainer from "@/SvgContainer/SvgContainer";
 
@@ -11,7 +11,7 @@ export default function Home() {
           points={[[50, 3], [100, 28], [100, 75], [50, 100], [3, 75], [3, 25]]}
           radius={50}
           terrainSpecs={{
-            terrainName: HexagonIconKeys.desert,
+            terrainName: TerrainIconKeys.desert,
             x: 0,
             y: 0
           }}

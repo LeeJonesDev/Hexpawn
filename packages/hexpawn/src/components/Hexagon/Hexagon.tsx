@@ -1,4 +1,4 @@
-import { HexagonIcons } from "./Terrain/TerrainIconsSvg";
+import { TerrainIcons } from "./Terrain/TerrainIcons";
 import { HexagonProps } from "./HexagonProps";
 
 const Hexagon = ({
@@ -53,7 +53,7 @@ const Hexagon = ({
             {HexagonComponent}
 
             {terrainSpecs &&
-                HexagonIcons[terrainSpecs.terrainName]({
+                TerrainIcons[terrainSpecs.terrainName]({
                     ...terrainProps
                 })}
         </g>
