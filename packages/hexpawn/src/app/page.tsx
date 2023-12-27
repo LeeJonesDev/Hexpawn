@@ -13,7 +13,7 @@ export default function Home() {
             terrainname: TerrainIconKeys.desert,
             x: 0,
             y: 0,
-            stroke: 'blue',
+            stroke: 'black',
             strokeWidth: 2,
             fill: 'none'
           }}
@@ -26,7 +26,6 @@ export default function Home() {
             r: 0,
             s: 0
           }}
-
         />
       </SVGContainer>
     </>

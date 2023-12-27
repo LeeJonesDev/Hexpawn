@@ -1,6 +1,5 @@
 import { TerrainIcons } from "./Terrain/TerrainIcons";
 import { HexagonProps } from "./HexagonProps";
-import style from './style.module.css'
 
 const Hexagon = ({
     id,
@@ -38,12 +37,13 @@ const Hexagon = ({
         TerrainIcons[terrainProps.terrainname]({
             key: `icon-${id}`,
             ...terrainProps,
-
+            x: '10%',
+            y: '10%'
         })
 
     const TerrainComponentWrapped = terrainProps &&
         TerrainComponent &&
-        <g transform="scale(0.43) translate(50 50)">
+        <g transform="scale(0.5)">
             {TerrainComponent}
         </g>
 
