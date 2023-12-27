@@ -1,5 +1,6 @@
 import { TerrainIcons } from "./Terrain/TerrainIcons";
 import { HexagonProps } from "./HexagonProps";
+import CoordinateText from "./CoordinateText/CoordinateText";
 
 const Hexagon = ({
     id,
@@ -50,34 +51,7 @@ const Hexagon = ({
             {TerrainComponent}
         </g>
 
-    const offsetCoordinatesText = showOffsetCoordinates &&
-        <text {...{
-            key: `offset-coords-${id}`,
-            fill,
-            stroke,
-            strokeWidth,
-            x: '12%',
-            y: '17%'
-        }}>
-            {offsetCoordinates.x}, {offsetCoordinates.y}
-        </text>
 
-
-    const axialCoordinatesText = showAxialCoordinates &&
-        <text {...{
-            key: `axial-coords-${id}`,
-            fill,
-            stroke,
-            strokeWidth,
-            x: '10%',
-            y: '55%'
-        }}>
-            {axialCoordinates.q}, {axialCoordinates.r}, {axialCoordinates.s}
-        </text>
-
-
-    //TODO: Render terain coorectly
-    //TODO: Terrain Props
 
     return (
         <g>
@@ -85,12 +59,9 @@ const Hexagon = ({
 
             {TerrainComponentWrapped}
 
-            {offsetCoordinatesText}
-
-            {axialCoordinatesText}
+            <CoordinateText {...{ id, ...props }} />
         </g >
     );
 }
 
 export default Hexagon;
-
