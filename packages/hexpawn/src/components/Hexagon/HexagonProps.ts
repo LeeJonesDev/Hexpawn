@@ -7,6 +7,7 @@ interface HexagonProps {
     key?: string
 
     terrainProps?: TerrainProps,
+    showTerrianIcon?: boolean,
 
     //x, y coords of each point of the svg
     points: [
@@ -61,6 +62,8 @@ interface HexagonProps {
 
     offsetCoordinates: { x: number, y: number },
     axialCoordinates: { q: number, r: number, s: number },
+    showOffsetCoordinates?: boolean,
+    showAxialCoordinates?: boolean,
 
     q?: number
     r?: number

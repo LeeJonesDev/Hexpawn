@@ -10,6 +10,9 @@ const Hexagon = ({
     fill = 'none',
     stroke = 'black',
     strokeWidth = 2,
+    showTerrianIcon = false,
+    showOffsetCoordinates = false,
+    showAxialCoordinates = false,
     ...props
 }: HexagonProps) => {
 
@@ -33,24 +36,48 @@ const Hexagon = ({
         {...props}
     />
 
-    const TerrainComponent = terrainProps &&
+    const TerrainComponent = showTerrianIcon && terrainProps &&
         TerrainIcons[terrainProps.terrainname]({
             key: `icon-${id}`,
             ...terrainProps,
-            x: '10%',
-            y: '10%'
+            x: '25%',
+            y: '40%'
         })
 
     const TerrainComponentWrapped = terrainProps &&
         TerrainComponent &&
-        <g transform="scale(0.5)">
+        <g transform="scale(0.35)">
             {TerrainComponent}
         </g>
 
+    const offsetCoordinatesText = showOffsetCoordinates &&
+        <text {...{
+            key: `offset-coords-${id}`,
+            fill,
+            stroke,
+            strokeWidth,
+            x: '12%',
+            y: '17%'
+        }}>
+            {offsetCoordinates.x}, {offsetCoordinates.y}
+        </text>
+
+
+    const axialCoordinatesText = showAxialCoordinates &&
+        <text {...{
+            key: `axial-coords-${id}`,
+            fill,
+            stroke,
+            strokeWidth,
+            x: '10%',
+            y: '55%'
+        }}>
+            {axialCoordinates.q}, {axialCoordinates.r}, {axialCoordinates.s}
+        </text>
+
+
     //TODO: Render terain coorectly
     //TODO: Terrain Props
-
-    //TODO: GET AND RENDER COORDINATES
 
     return (
         <g>
@@ -58,6 +85,9 @@ const Hexagon = ({
 
             {TerrainComponentWrapped}
 
+            {offsetCoordinatesText}
+
+            {axialCoordinatesText}
         </g >
     );
 }
