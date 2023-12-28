@@ -4,6 +4,9 @@
     "workspaces": [
         "packages/*"
     ],
+    "scripts": {
+        "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev"
+    },
     "engines": {
         "node": ">=20",
         "pnpm": "8.12.1"
