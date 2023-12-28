@@ -2,11 +2,17 @@
     "private": true,
     "author": "Lee Jones",
     "workspaces": [
-        "hexpawn"
+        "packages/*"
     ],
     "scripts": {
-        "dev": "yarn workspace hexpawn dev",
-        "build": "yarn workspace hexpawn build",
-        "lint": "yarn workspace hexpawn lint"
+        "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev"
+    },
+    "engines": {
+        "node": ">=20",
+        "pnpm": "8.12.1"
+    },
+    "packageManager": "pnpm@8.12.1",
+    "dependencies": {
+        "hexpawn": "^0.1.0"
     }
 }
