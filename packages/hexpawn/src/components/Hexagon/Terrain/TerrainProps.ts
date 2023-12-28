@@ -3,20 +3,14 @@ import { TerrainIconKeys } from "./TerrainIcons";
 interface TerrainProps {
     fill?: string | undefined;
     fillOpacity?: number | string | undefined;
+    key?: string
     stroke?: string | undefined;
     strokeOpacity?: number | string | undefined;
     strokeWidth?: number | string | undefined;
     terrainname: TerrainIconKeys,
-
-    key?: string
-
+    transform?: string | undefined;
     x: number;
     y: number;
-
-    transform?: string | undefined;
-
-    //TODO: prune props
-    //TODO: sort props on save
 }
 
 export type { TerrainProps }
