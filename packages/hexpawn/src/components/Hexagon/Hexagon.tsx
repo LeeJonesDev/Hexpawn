@@ -16,13 +16,9 @@ const Hexagon = ({
     showAxialCoordinates = false,
     ...props
 }: HexagonProps) => {
-
-    const parsedPoints: string = points.map(coordinate =>
-        coordinate.join(' ').toString()
-    ).join(' ').toString();
-
     const HexagonComponent = <polygon
         key={`hexagon-${id}`}
+
         x={offsetCoordinates.x}
         y={offsetCoordinates.y}
 
@@ -30,7 +26,8 @@ const Hexagon = ({
         r={axialCoordinates.r}
         s={axialCoordinates.s}
 
-        points={parsedPoints}
+        points={points?.toString()}
+
         fill={fill}
         stroke={stroke}
         strokeWidth={strokeWidth}
@@ -51,15 +48,24 @@ const Hexagon = ({
             {TerrainComponent}
         </g>
 
-
-
     return (
         <g>
             {HexagonComponent}
 
             {TerrainComponentWrapped}
 
-            <CoordinateText {...{ id, ...props }} />
+            <CoordinateText
+                {...{
+                    id,
+                    offsetCoordinates,
+                    axialCoordinates,
+                    fill,
+                    stroke,
+                    strokeWidth,
+                    showOffsetCoordinates,
+                    showAxialCoordinates
+                }}
+            />
         </g >
     );
 }

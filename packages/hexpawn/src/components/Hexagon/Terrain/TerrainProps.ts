@@ -3,11 +3,9 @@ import { TerrainIconKeys } from "./TerrainIcons";
 interface TerrainProps {
     fill?: string | undefined;
     fillOpacity?: number | string | undefined;
-
     stroke?: string | undefined;
     strokeOpacity?: number | string | undefined;
     strokeWidth?: number | string | undefined;
-
     terrainname: TerrainIconKeys,
 
     key?: string

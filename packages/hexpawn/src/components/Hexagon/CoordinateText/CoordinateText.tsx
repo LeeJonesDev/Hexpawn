@@ -9,7 +9,6 @@ const CoordinateText = ({
     axialCoordinates,
     showAxialCoordinates,
     ...props }: CoordinateTextProps) => {
-
     const offsetCoordianteText = showOffsetCoordinates && <text {...{
         key: `offset-coords-${id}`,
         stroke,
