@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { SVGPointsToString } from './SVGPoints';
+import { svgPointsToString } from './SVGPoints';
 
 test('returns valid string format', () => {
     const points = [
@@ -10,7 +10,7 @@ test('returns valid string format', () => {
         { x: 3, y: 75 },
         { x: 3, y: 25 }
     ];
-    const output = SVGPointsToString(points)
+    const output = svgPointsToString(points)
 
     const spaceSplit = output.split(' ')
 

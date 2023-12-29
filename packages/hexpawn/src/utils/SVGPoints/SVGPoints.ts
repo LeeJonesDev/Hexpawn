@@ -4,7 +4,7 @@ interface SVGPointProps {
 }
 
 
-const SVGPointsToString = (points: SVGPointProps[]) => {
+const svgPointsToString = (points: SVGPointProps[]) => {
     return points.map((point: SVGPointProps) => {
         return `${point.x}, ${point.y}`
     }
@@ -13,7 +13,7 @@ const SVGPointsToString = (points: SVGPointProps[]) => {
 }
 
 export {
-    SVGPointsToString
+    svgPointsToString
 }
 
 export type {
