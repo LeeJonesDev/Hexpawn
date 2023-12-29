@@ -6,7 +6,8 @@
     ],
     "scripts": {
         "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev",
-        "hexpawn:test": "pnpm -C 'packages/hexpawn/' run test"
+        "hexpawn:test:unit": "pnpm -C 'packages/hexpawn/' run test:unit",
+        "hexpawn:test:e2e": "pnpm -C 'packages/hexpawn/' run test:e2e:headless"
     },
     "engines": {
         "node": ">=20",
