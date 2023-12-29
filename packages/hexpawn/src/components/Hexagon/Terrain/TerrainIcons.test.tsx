@@ -1,8 +1,6 @@
 import { expect, test } from 'vitest';
 import { TerrainIconKeys, TerrainIcons } from './TerrainIcons';
-
-//TODO: this path is harsh, get alias working
-import { camelize } from '../../../utils/stringUtils/stringUtils';
+import { camelize } from '@/utils/stringUtils/stringUtils';
 
 test('test', () => {
     //fs string generated

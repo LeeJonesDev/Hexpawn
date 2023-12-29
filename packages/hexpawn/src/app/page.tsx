@@ -1,7 +1,7 @@
+import Hexagon from "@/components/Hexagon/Hexagon";
 import { TerrainIconKeys } from "@/components/Hexagon/Terrain/TerrainIcons";
-import Hexagon from "../components/Hexagon/Hexagon";
 import SVGContainer from "@/components/SvgContainer/SvgContainer";
-import { svgPointsToString } from "../utils/SVGPoints/SVGPoints";
+import { svgPointsToString } from "@/utils/SVGPoints/SVGPoints";
 
 export default function Home() {
 
