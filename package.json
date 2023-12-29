@@ -5,7 +5,8 @@
         "packages/*"
     ],
     "scripts": {
-        "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev"
+        "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev",
+        "hexpawn:test": "pnpm -C 'packages/hexpawn/' run test"
     },
     "engines": {
         "node": ">=20",
