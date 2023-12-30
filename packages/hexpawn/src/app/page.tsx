@@ -1,7 +1,7 @@
+import Hexagon from "@/components/Hexagon/Hexagon";
 import { TerrainIconKeys } from "@/components/Hexagon/Terrain/TerrainIcons";
-import Hexagon from "../components/Hexagon/Hexagon";
 import SVGContainer from "@/components/SvgContainer/SvgContainer";
-import { SVGPointsToString } from "./utils/SVGPoints";
+import { svgPointsToString } from "@/utils/SVGPoints/SVGPoints";
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
       <SVGContainer>
         <Hexagon
           id={"1-1"}
-          points={SVGPointsToString(points)}
+          points={svgPointsToString(points)}
           terrainProps={{
             terrainname: TerrainIconKeys.desert,
             x: 0,

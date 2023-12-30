@@ -16,3 +16,10 @@ A game framework built on nextjs using sass modules, dprint, biome, and editor c
 
 note: you must have a global install of pnpm for this to work. This does not use `yarn` or `npm`
 
+### Biome
+
+Biome configuration is done in the `dprint.json` file
+
+### SVGs
+
+SVGs can be loaded from files via SVGR which uses the `svgrc.json` file for configuration. They can also be created inline as one would expect.
