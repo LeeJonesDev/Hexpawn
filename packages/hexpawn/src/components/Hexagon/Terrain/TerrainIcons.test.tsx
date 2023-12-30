@@ -17,5 +17,3 @@ test('test', () => {
 
     expect(TerrainComponent === fullPath).toBe(true)
 })
-
-test.todo('render svg test')

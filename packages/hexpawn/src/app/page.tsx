@@ -26,7 +26,8 @@ export default function Home() {
             y: 0,
             stroke: 'black',
             strokeWidth: 2,
-            fill: 'none'
+            fill: 'none',
+            id: "terrain1-1",
           }}
           showTerrianIcon={true}
 
