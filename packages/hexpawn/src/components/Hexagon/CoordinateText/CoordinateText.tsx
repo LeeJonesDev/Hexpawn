@@ -19,8 +19,8 @@ const CoordinateText = ({
 			{...{
 				stroke,
 				strokeWidth,
-				x: offsetCoordinates?.coordiateX,
-				y: offsetCoordinates?.coordiateY,
+				x: offsetCoordinates?.coordiateTextX,
+				y: offsetCoordinates?.coordiateTextY,
 				fontSize: coordinateFontSize,
 				...props,
 			}}
@@ -36,8 +36,8 @@ const CoordinateText = ({
 			{...{
 				stroke,
 				strokeWidth,
-				x: axialCoordinates?.coordiateX,
-				y: axialCoordinates?.coordiateY,
+				x: axialCoordinates?.coordiateTextX,
+				y: axialCoordinates?.coordiateTextY,
 				fontSize: coordinateFontSize,
 				...props,
 			}}

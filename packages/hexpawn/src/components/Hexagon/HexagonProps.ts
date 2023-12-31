@@ -6,8 +6,8 @@ interface HexagonProps {
 		q: number;
 		r: number;
 		s: number;
-		coordiateX?: number;
-		coordiateY?: number;
+		coordiateTextX?: number;
+		coordiateTextY?: number;
 	};
 	center?: SVGPointProps;
 	fill?: string | undefined;
@@ -19,8 +19,8 @@ interface HexagonProps {
 	offsetCoordinates: {
 		x: number;
 		y: number;
-		coordiateX?: number;
-		coordiateY?: number;
+		coordiateTextX?: number;
+		coordiateTextY?: number;
 	};
 	points?: string;
 	q?: number;
