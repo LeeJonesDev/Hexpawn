@@ -15,9 +15,9 @@ export default function Home() {
 	];
 
 	const axialGrid = generateAxialGrid({
-		height: 20,
-		totalNumColumns: 20,
-		totalNumRows: 20,
+		height: 50,
+		totalNumColumns: 50,
+		totalNumRows: 50,
 		showAxialCoordinates: true,
 		showOffsetCoordinates: true
 	})
@@ -29,7 +29,7 @@ export default function Home() {
 
 	return (
 		<>
-			<SVGContainer >
+			<SVGContainer {...axialGrid}>
 				{hexes}
 			</SVGContainer>
 

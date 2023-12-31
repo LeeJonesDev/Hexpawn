@@ -1,8 +1,8 @@
 import { HexagonProps } from "@/components/Hexagon/HexagonProps";
 
 interface generateAxialGridReturnProps {
-    svgAreaHeight: number,
-    svgAreaWidth: number,
+    height: number,
+    width: number,
     hexes: HexagonProps[]
 }
 

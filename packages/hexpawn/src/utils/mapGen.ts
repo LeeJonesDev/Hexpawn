@@ -94,8 +94,8 @@ const generateAxialGrid = (
     }
 
     return {
-        svgAreaHeight: gridProperties.svgAreaHeight,
-        svgAreaWidth: gridProperties.svgAreaWidth,
+        height: gridProperties.svgAreaHeight,
+        width: gridProperties.svgAreaWidth,
         hexes
     };
 }
