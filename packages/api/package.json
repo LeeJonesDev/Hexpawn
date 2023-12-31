@@ -1,0 +1,7 @@
+{
+    "private": true,
+    "author": "Lee Jones",
+    "scripts": {
+        "api": "go run main.go"
+    }
+}

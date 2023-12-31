@@ -23,7 +23,8 @@
 			"dist",
 			"node_modules",
 			".next",
-			"cypress"
+			"cypress",
+			"api"
 		]
 	}
 }

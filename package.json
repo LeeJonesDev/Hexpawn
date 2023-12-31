@@ -8,7 +8,8 @@
         "hexpawn:dev": "pnpm -C 'packages/hexpawn/' run dev",
         "hexpawn:lint": "pnpm -C 'packages/hexpawn/' run lint",
         "hexpawn:test:unit": "pnpm -C 'packages/hexpawn/' run test:unit",
-        "hexpawn:test:e2e": "pnpm -C 'packages/hexpawn/' run test:e2e:headless"
+        "hexpawn:test:e2e": "pnpm -C 'packages/hexpawn/' run test:e2e:headless",
+        "api": "pnpm -C 'packages/hexpawn/' run api"
     },
     "engines": {
         "node": ">=20",
