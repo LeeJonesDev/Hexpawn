@@ -2,6 +2,7 @@ import Hexagon from "@/components/Hexagon/Hexagon";
 import { TerrainIconKeys } from "@/components/Hexagon/Terrain/TerrainIcons";
 import SVGContainer from "@/components/SvgContainer/SvgContainer";
 import { svgPointsToString } from "@/utils/SVGPoints/SVGPoints";
+import { generateAxialGrid } from "@/utils/mapGen";
 
 export default function Home() {
 	const points = [
@@ -13,8 +14,25 @@ export default function Home() {
 		{ x: 3, y: 25 },
 	];
 
+	const axialGrid = generateAxialGrid({
+		height: 20,
+		totalNumColumns: 20,
+		totalNumRows: 20,
+		showAxialCoordinates: true,
+		showOffsetCoordinates: true
+	})
+
+	let hexes = []
+	for (const hex of axialGrid.hexes) {
+		hexes.push(< Hexagon key={hex.key} {...hex} />)
+	}
+
 	return (
 		<>
+			<SVGContainer >
+				{hexes}
+			</SVGContainer>
+
 			<SVGContainer>
 				<Hexagon
 					id={"1-1"}

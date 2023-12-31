@@ -6,6 +6,7 @@ interface SVGPointProps {
 const svgPointsToString = (points: SVGPointProps[]) => {
 	return points
 		.map((point: SVGPointProps) => {
+			console.log(`${point.x}, ${point.y}`)
 			return `${point.x}, ${point.y}`;
 		})
 		.join(" ");
