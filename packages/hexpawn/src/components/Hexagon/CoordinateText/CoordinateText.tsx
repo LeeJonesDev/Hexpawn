@@ -1,5 +1,6 @@
 import { CoordinateTextProps } from "./CoordinateTextProps";
-const x = {};
+import style from './style.module.css'
+
 const CoordinateText = ({
 	id,
 	stroke,
@@ -8,16 +9,18 @@ const CoordinateText = ({
 	showOffsetCoordinates,
 	axialCoordinates,
 	showAxialCoordinates,
+	coordinateFontSize,
 	...props
 }: CoordinateTextProps) => {
 	const offsetCoordianteText = showOffsetCoordinates && (
-		<text
+		<text className={style.text}
 			key={`offset-coords-${id}`}
 			{...{
 				stroke,
 				strokeWidth,
-				x: "12%",
-				y: "17%",
+				x: offsetCoordinates?.coordiateX,
+				y: offsetCoordinates?.coordiateY,
+				fontSize: coordinateFontSize,
 				...props,
 			}}
 		>
@@ -26,13 +29,14 @@ const CoordinateText = ({
 	);
 
 	const axialCoordinatText = showAxialCoordinates && (
-		<text
+		<text className={style.text}
 			key={`axial-coords-${id}`}
 			{...{
 				stroke,
 				strokeWidth,
-				x: "10%",
-				y: "55%",
+				x: axialCoordinates?.coordiateX,
+				y: axialCoordinates?.coordiateY,
+				fontSize: coordinateFontSize,
 				...props,
 			}}
 		>

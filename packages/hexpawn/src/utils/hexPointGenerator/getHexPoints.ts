@@ -1,5 +1,5 @@
-import { SVGPointProps } from "./SVGPoints/SVGPoints";
-import { getHexPointProps, getHexPointsProps } from "./coordinateGenProps";
+import { SVGPointProps } from "../SVGPoints/SVGPoints";
+import { getHexPointProps, getHexPointsProps } from "./getHexPointsProps";
 
 function getHexPoint({ index, radius, centerX, centerY }: getHexPointProps) {
     const angleDegrees = 60 * index - 30;

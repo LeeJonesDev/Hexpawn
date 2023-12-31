@@ -14,6 +14,7 @@ const Hexagon = ({
 	showTerrianIcon = false,
 	showOffsetCoordinates = false,
 	showAxialCoordinates = false,
+	coordinateFontSize,
 	...props
 }: HexagonProps) => {
 	const HexagonComponent = (
@@ -59,9 +60,9 @@ const Hexagon = ({
 					axialCoordinates,
 					fill,
 					stroke,
-					strokeWidth,
 					showOffsetCoordinates,
 					showAxialCoordinates,
+					coordinateFontSize
 				}}
 			/>
 		</g>

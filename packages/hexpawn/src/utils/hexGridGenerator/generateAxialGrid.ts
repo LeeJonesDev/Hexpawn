@@ -1,7 +1,7 @@
 import { HexagonProps } from "@/components/Hexagon/HexagonProps";
-import { generateAxialGridProps, generateAxialGridReturnProps } from "./mapGenProps";
-import { getHexPoints } from "./coordinateGen";
-import { svgPointsToString } from "./SVGPoints/SVGPoints";
+import { generateAxialGridProps, generateAxialGridReturnProps } from "./generateAxialGridProps";
+import { getHexPoints } from "../hexPointGenerator/getHexPoints";
+import { svgPointsToString } from "../SVGPoints/SVGPoints";
 
 const getAxialGridProperties = ({
     height,
@@ -46,6 +46,7 @@ const generateAxialGrid = (
 ): generateAxialGridReturnProps => {
     const hexes: HexagonProps[] = [];
     const gridProperties = getAxialGridProperties({ height, totalNumColumns, totalNumRows });
+    const coordinateFontSize = gridProperties.radius * 0.28;
 
     for (let r = 0; r < totalNumRows; r++) {
         let q = Math.floor(r / 2) * -1;
@@ -72,15 +73,30 @@ const generateAxialGrid = (
                 id,
                 key,
                 points: pointString,
-                center: { x: gridProperties.centerX, y: gridProperties.centerY },
+                center: {
+                    x: gridProperties.centerX,
+                    y: gridProperties.centerY
+                },
                 height,
                 fill: "white", //TODO: based on terrain or data
                 stroke: "black", //TODO: based on terrain or data
-                offsetCoordinates: { x: colQ, y: r },
-                axialCoordinates: { q: q, r: r, s: s },
+                offsetCoordinates: {
+                    x: colQ,
+                    y: r,
+                    coordiateX: gridProperties.centerX,
+                    coordiateY: gridProperties.centerY - gridProperties.radius * 0.5
+                },
+                axialCoordinates: {
+                    q: q,
+                    r: r,
+                    s: s,
+                    coordiateX: gridProperties.centerX,
+                    coordiateY: gridProperties.centerY + gridProperties.radius * 0.5
+                },
                 radius: gridProperties.radius,
                 showAxialCoordinates,
-                showOffsetCoordinates
+                showOffsetCoordinates,
+                coordinateFontSize,
 
                 //TODO: terrain
                 //TODO: coordiate locs
