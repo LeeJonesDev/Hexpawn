@@ -1,17 +1,20 @@
 import { SvgContainerProps } from "./SvgContainerProps";
 
 const SVGContainer = ({
-    children,
-    viewBox,
-    ...props
+	title,
+	children,
+	viewBox,
+	...props
 }: SvgContainerProps) => {
-    const parsedViewBox = !viewBox || typeof viewBox === 'string'
-        ? viewBox
-        : viewBox.join(' ');
+	const parsedViewBox =
+		!viewBox || typeof viewBox === "string" ? viewBox : viewBox.join(" ");
 
-    return <svg viewBox={parsedViewBox}>
-        {children}
-    </svg>
-}
+	return (
+		<svg {...props} viewBox={parsedViewBox}>
+			<title>{title ? title : "svg-container"}</title>
+			{children}
+		</svg>
+	);
+};
 
 export default SVGContainer;
