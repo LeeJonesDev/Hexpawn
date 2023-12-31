@@ -1,22 +1,16 @@
 interface SVGPointProps {
-    x: number,
-    y: number
+	x: number;
+	y: number;
 }
-
 
 const svgPointsToString = (points: SVGPointProps[]) => {
-    return points.map((point: SVGPointProps) => {
-        return `${point.x}, ${point.y}`
-    }
-    ).join(' ');
+	return points
+		.map((point: SVGPointProps) => {
+			return `${point.x}, ${point.y}`;
+		})
+		.join(" ");
+};
 
-}
+export { svgPointsToString };
 
-export {
-    svgPointsToString
-}
-
-export type {
-    SVGPointProps
-}
-
+export type { SVGPointProps };
