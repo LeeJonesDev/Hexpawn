@@ -3,15 +3,15 @@ interface CoordinateTextProps {
 		q: number;
 		r: number;
 		s: number;
-		coordiateX?: number;
-		coordiateY?: number;
+		coordiateTextX?: number;
+		coordiateTextY?: number;
 	};
 	id: string;
 	offsetCoordinates?: {
 		x: number;
 		y: number;
-		coordiateX?: number;
-		coordiateY?: number;
+		coordiateTextX?: number;
+		coordiateTextY?: number;
 	};
 	showAxialCoordinates?: boolean;
 	showOffsetCoordinates?: boolean;
