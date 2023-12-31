@@ -62,7 +62,7 @@ const Hexagon = ({
 					stroke,
 					showOffsetCoordinates,
 					showAxialCoordinates,
-					coordinateFontSize
+					coordinateFontSize,
 				}}
 			/>
 		</g>

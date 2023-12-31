@@ -19,19 +19,17 @@ export default function Home() {
 		totalNumColumns: 20,
 		totalNumRows: 20,
 		showAxialCoordinates: false,
-		showOffsetCoordinates: false
-	})
+		showOffsetCoordinates: false,
+	});
 
-	let hexes = []
+	const hexes = [];
 	for (const hex of axialGrid.hexes) {
-		hexes.push(< Hexagon key={hex.key} {...hex} />)
+		hexes.push(<Hexagon key={hex.key} {...hex} />);
 	}
 
 	return (
 		<>
-			<SVGContainer {...axialGrid}>
-				{hexes}
-			</SVGContainer>
+			<SVGContainer {...axialGrid}>{hexes}</SVGContainer>
 
 			<SVGContainer>
 				<Hexagon

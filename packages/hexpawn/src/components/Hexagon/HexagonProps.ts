@@ -2,18 +2,29 @@ import { SVGPointProps } from "@/utils/SVGPoints/SVGPoints";
 import { TerrainProps } from "./Terrain/TerrainProps";
 
 interface HexagonProps {
-	axialCoordinates: { q: number; r: number; s: number, coordiateX?: number, coordiateY?: number };
-	center?: SVGPointProps,
+	axialCoordinates: {
+		q: number;
+		r: number;
+		s: number;
+		coordiateX?: number;
+		coordiateY?: number;
+	};
+	center?: SVGPointProps;
 	fill?: string | undefined;
 	fillOpacity?: number | string | undefined;
-	height?: number
+	height?: number;
 	id: string;
 	key?: string;
 	name?: string;
-	offsetCoordinates: { x: number; y: number, coordiateX?: number, coordiateY?: number };
+	offsetCoordinates: {
+		x: number;
+		y: number;
+		coordiateX?: number;
+		coordiateY?: number;
+	};
 	points?: string;
 	q?: number;
-	radius?: number
+	radius?: number;
 	s?: number;
 	showAxialCoordinates?: boolean;
 	showOffsetCoordinates?: boolean;
@@ -21,7 +32,7 @@ interface HexagonProps {
 	stroke?: string | undefined;
 	strokeWidth?: number | string | undefined;
 	terrainProps?: TerrainProps;
-	coordinateFontSize?: number
+	coordinateFontSize?: number;
 }
 
 export type { HexagonProps };
